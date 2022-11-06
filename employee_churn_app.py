@@ -195,7 +195,7 @@ with col1:
     if a in ["IT", "RandD", "product_mng", "hr"]:
         if a == "IT":                                     
             col1.metric("*Department", "IT")
-        elif a == "RandD:
+        elif a == "RandD":
             col1.metric("*Department", "Research and Development")
         elif a == "product_mng":
              col1.metric("*Department", "Product Management")
