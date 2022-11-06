@@ -192,7 +192,7 @@ col4.metric("*Salary", input_df["salary"][0].title())
 col1, col2 =st.columns(2)
 with col1:
     input_df["departments"][0] = a
-    if a in ["IT", "RandD", "product_mng", "hr":
+    if a in ["IT", "RandD", "product_mng", "hr"]:
         if a == "IT":                                     
             col1.metric("*Department", "IT")
         elif a == "RandD:
