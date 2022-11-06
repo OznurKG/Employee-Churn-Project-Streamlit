@@ -191,13 +191,12 @@ col3.metric("*Promotion in Last 5 Years", input_df["promotion_last_5years"])
 col4.metric("*Salary", input_df["salary"][0].title())
 col1, col2 =st.columns(2)
 with col1:
-    input_df["departments"][0] = a
-    if a in ["IT", "RandD", "product_mng", "hr"]:
-        if a == "IT":                                     
+    if input_df["departments"][0] in ["IT", "RandD", "product_mng", "hr"]:
+        if input_df["departments"][0] == "IT":                                     
             col1.metric("*Department", "IT")
-        elif a == "RandD":
+        elif input_df["departments"][0] == "RandD":
             col1.metric("*Department", "Research and Development")
-        elif a == "product_mng":
+        elif input_df["departments"][0] == "product_mng":
              col1.metric("*Department", "Product Management")
         else:
              col1.metric("*Department", "Human Resources")
