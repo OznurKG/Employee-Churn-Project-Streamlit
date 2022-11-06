@@ -154,7 +154,7 @@ else:
             departments = "sales"
         elif departments == "Support":
             departments = "sales"
-        else:
+        elif departments == "Technical":
             departments = "technical"
         salary_level = df["salary"].str.title().unique()
         salary = st.sidebar.selectbox('Salary', salary_level)
