@@ -120,8 +120,8 @@ if uploaded_file is not None:
     input_df = pd.read_csv(uploaded_file)
 else:
     def user_input_features():
-        satisfaction_level = st.sidebar.slider('Satisfaction Level', df["satisfaction_level"].min(), df["satisfaction_level"].max(), df["satisfaction_level"].median(), 0.01)
-        last_evaluation = st.sidebar.slider('Last Evaluation', df["last_evaluation"].min(), df["last_evaluation"].max(), df["last_evaluation"].median(), 0.01)
+        satisfaction_level = st.sidebar.slider('Satisfaction Level', df["satisfaction_level"].min(), df["satisfaction_level"].max(), df["satisfaction_level"].median(), np.float(0.01))
+        last_evaluation = st.sidebar.slider('Last Evaluation', df["last_evaluation"].min(), df["last_evaluation"].max(), df["last_evaluation"].median(), np.float(0.01))
         average_montly_hours = st.sidebar.number_input('Average Monthly Hours', df["average_montly_hours"].min(), df["average_montly_hours"].max(), int(df["average_montly_hours"].median()), 1)
         number_project = st.sidebar.number_input('Number of Project', df["number_project"].min(), df["number_project"].max(), int(df["number_project"].median()), 1)
         time_spend_company = st.sidebar.number_input('Time Spent in the Company', df["time_spend_company"].min(), df["time_spend_company"].max(), int(df["time_spend_company"].median()), 1)
