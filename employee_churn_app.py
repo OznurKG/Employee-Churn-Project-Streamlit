@@ -80,7 +80,7 @@ st.markdown(filedownload(df), unsafe_allow_html=True)
 st.subheader('User Input Features')
 
 
-
+#Sidebar background image from local
 def sidebar_bg(side_bg):
 
    side_bg_ext = 'png'
@@ -104,15 +104,15 @@ st.sidebar.header('User Input Features')
 #To show uploaded data or original dataset
 uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
 if uploaded_file is not None:
-   st.table(df)
+   st.table(df.head())
 else:
    st.markdown("<p5 style='text-align: left;color: black; background-color: #b5e7a0'>Awaiting CSV file to be uploaded or filters on the sidebar to be selected. Currently using example input parameters (Please tick the checkbox to see).</p>", unsafe_allow_html=True)
 
-#To show data   
-cbox = st.checkbox("Show Data")
+   #To show data   
+   cbox = st.checkbox("Show Data")
 
-if cbox:
-    st.table(df.sample(5))
+   if cbox:
+      st.table(df.sample(5))
 
 #Create features on the sidebar
 if uploaded_file is not None:
