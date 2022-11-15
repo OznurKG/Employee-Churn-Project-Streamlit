@@ -121,11 +121,11 @@ else:
     def user_input_features():
 
         
-        satisfaction_level = st.sidebar.slider('Satisfaction Level', float(df["satisfaction_level"].min()), float(df["satisfaction_level"].max()), float(df["satisfaction_level"].median()), 0.01)
-        last_evaluation = st.sidebar.slider('Last Evaluation', float(df["last_evaluation"].min()), float(df["last_evaluation"].max()), float(df["last_evaluation"].median()), 0.01)
-        average_montly_hours = st.sidebar.number_input('Average Monthly Hours', int(df["average_montly_hours"].min()), int(df["average_montly_hours"].max()), int(df["average_montly_hours"].median()), 1)
-        number_project = st.sidebar.number_input('Number of Project', int(df["number_project"].min()), int(df["number_project"].max()), int(df["number_project"].median()), 1)
-        time_spend_company = st.sidebar.number_input('Time Spent in the Company', int(df["time_spend_company"].min()), int(df["time_spend_company"].max()), int(df["time_spend_company"].median()), 1)
+        satisfaction_level = st.sidebar.slider('Satisfaction Level', float(df["satisfaction_level"].min()), float(df["satisfaction_level"].max()), float(0.48), 0.01)
+        last_evaluation = st.sidebar.slider('Last Evaluation', float(df["last_evaluation"].min()), float(df["last_evaluation"].max()), float(0.63), 0.01)
+        average_montly_hours = st.sidebar.number_input('Average Monthly Hours', int(df["average_montly_hours"].min()), int(226), int(7), 1)
+        number_project = st.sidebar.number_input('Number of Project', int(df["number_project"].min()), int(df["number_project"].max()), int(7), 1)
+        time_spend_company = st.sidebar.number_input('Time Spent in the Company', int(df["time_spend_company"].min()), int(df["time_spend_company"].max()), int(3), 1)
         work_accident = st.sidebar.radio('Work Accident', ('Yes', 'No'))
         if work_accident == 'Yes':
             work_accident = 1
