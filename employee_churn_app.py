@@ -121,7 +121,7 @@ else:
     def user_input_features():
 
         
-        satisfaction_level = st.sidebar.slider('Satisfaction Level', float(df["satisfaction_level"].min()), float(df["satisfaction_level"].max()), float(0.48), 0.01)
+        satisfaction_level = st.sidebar.slider('Satisfaction Level', float(df["satisfaction_level"].min()), float(df["satisfaction_level"].max()), float(0.45), 0.01)
         last_evaluation = st.sidebar.slider('Last Evaluation', float(df["last_evaluation"].min()), float(df["last_evaluation"].max()), float(0.63), 0.01)
         average_montly_hours = st.sidebar.number_input('Average Monthly Hours', int(df["average_montly_hours"].min()),int(df["average_montly_hours"].max()), int(226), 1)
         number_project = st.sidebar.number_input('Number of Project', int(df["number_project"].min()), int(df["number_project"].max()), int(7), 1)
