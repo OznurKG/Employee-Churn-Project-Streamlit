@@ -180,28 +180,28 @@ else:
 
 #To see the selected filters on the main page
 col1, col2, col3, col4 = st.columns(4)
-col1.metric("*Satisfaction Level", input_df["satisfaction_level"]) 
-col2.metric("*Last Evaluation", input_df["last_evaluation"])
-col3.metric("*Number Project", input_df["number_project"])
-col4.metric("*Average Montly Hours", input_df["average_montly_hours"])
+col1.metric("Satisfaction Level", input_df["satisfaction_level"]) 
+col2.metric("Last Evaluation", input_df["last_evaluation"])
+col3.metric("Number Project", input_df["number_project"])
+col4.metric("Average Montly Hours", input_df["average_montly_hours"])
 col1, col2, col3,col4 = st.columns(4)
-col1.metric("*Time Spent Company", input_df["time_spend_company"]) 
-col2.metric("*Work Accident", input_df["work_accident"])
-col3.metric("*Promotion in Last 5 Years", input_df["promotion_last_5years"])
-col4.metric("*Salary", input_df["salary"][0].title())
+col1.metric("Time Spent Company", input_df["time_spend_company"]) 
+col2.metric("Work Accident", input_df["work_accident"])
+col3.metric("Promotion in Last 5 Years", input_df["promotion_last_5years"])
+col4.metric("Salary", input_df["salary"][0].title())
 col1, col2 =st.columns(2)
 with col1:
     if input_df["departments"][0] in ["IT", "RandD", "product_mng", "hr"]:
         if input_df["departments"][0] == "IT":                                     
-            col1.metric("*Department", "IT")
+            col1.metric("Department", "IT")
         elif input_df["departments"][0] == "RandD":
-            col1.metric("*Department", "Research and Development")
+            col1.metric("Department", "Research and Development")
         elif input_df["departments"][0] == "product_mng":
-             col1.metric("*Department", "Product Management")
+             col1.metric("Department", "Product Management")
         else:
-             col1.metric("*Department", "Human Resources")
+             col1.metric("Department", "Human Resources")
     else:
-        col1.metric("*Department", input_df["departments"][0].title())
+        col1.metric("Department", input_df["departments"][0].title())
 st.markdown("---")
 
 
