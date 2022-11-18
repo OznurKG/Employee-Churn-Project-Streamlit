@@ -234,4 +234,4 @@ if st.sidebar.button("Check"):
                     }))      
     st.plotly_chart(fig, use_container_width=True)
 
-st.markdown('**Created by G-7 using Streamlit**')
+st.markdown('**Created by using Streamlit**')
